@@ -45,6 +45,7 @@ public class SortArrayByPartyII {
     }
 
     public static void main(String...args){
+        System.out.println(1 - 1.1);
         System.out.println(Arrays.toString(sortArrayByParityII(new int[]{4, 2, 5, 7})));
     }
 
