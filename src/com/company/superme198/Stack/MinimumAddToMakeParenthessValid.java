@@ -1,4 +1,4 @@
-package com.company.superme198.STack;
+package com.company.superme198.Stack;
 
 import java.util.Stack;
 
