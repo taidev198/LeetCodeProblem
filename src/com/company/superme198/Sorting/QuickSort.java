@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class QuickSort {
     static void quickSort(int[] arr, int left, int right){
         if (left >= right) return;
-        int pivot = arr[left];
+        int pivot = arr[left];//make first element of left subarray as pivot
         int i = left, j = right;
-        while (i <= j){
+        while (i <= j){//partition
             while (arr[i] < pivot)
                 i++;
             while (arr[j] > pivot)
                 j--;
-            if (i<=j){
+            if (i<=j){//swap two elements
                 int tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;
@@ -20,7 +20,6 @@ public class QuickSort {
                 j--;
             }
         }
-
         quickSort(arr, left, i -1);
         quickSort(arr, i, right);
     }
