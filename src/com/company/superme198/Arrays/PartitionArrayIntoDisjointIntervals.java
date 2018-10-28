@@ -27,7 +27,7 @@ public class PartitionArrayIntoDisjointIntervals {
             //find minRight
             int j =i;
             minRight = A[i];
-            while(j < len)
+            while(j < len && minRight >= maxLeft)
                 minRight = Math.min(minRight, A[j++]);
             if (maxLeft <= minRight)
                 break;
