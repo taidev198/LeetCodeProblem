@@ -42,7 +42,6 @@ public class LongestPalindrome {
         }
        Enumeration<Integer> e = hashtable.elements();
        List<Integer> list = Collections.list(e);
-        Collections.sort(list);
         boolean hasOdd = false;
         for (int i = list.size() -1; i >=0 ; i--) {
             if(list.get(i) % 2 == 1)
