@@ -23,6 +23,7 @@ public class DistributeCandies {
      * Output: 2
      * Explanation: For example, the sister has candies [2,3] and the brother has candies [1,1].
      * The sister has two different kinds of candies, the brother has only one kind of candies. */
+    //solution using hashtable:126ms
     static int distributeCandies(int[] candies) {
         int len = candies.length;
         Hashtable<Integer, Integer> res = new Hashtable<>();
@@ -38,16 +39,19 @@ public class DistributeCandies {
         List<Integer> tmp = new ArrayList<>(res.values());
         if(tmp.size() <= len /2)
             return tmp.size();
-        int temp = len/2;
-        for (int i = 0; temp != 0; i++) {
-            i = i % tmp.size();
-            if (tmp.get(i) > 0){
-                temp --;
-                tmp.set(i, tmp.get(i) -1);
-                ans++;
-            }
+        return len/2;
+    }
+    //using hashset: 77ms
+    static int distributeCandies1(int[] candies) {
+        int len = candies.length;
+        HashSet<Integer> res = new HashSet<>();
+        int ans = 0;
+        for (int i = 0; i < len; i++) {
+            res.add(candies[i]);
         }
-        return ans;
+        if(res.size() <= len /2)
+            return res.size();
+        return len/2;
     }
 
     public static void main(String...args){
