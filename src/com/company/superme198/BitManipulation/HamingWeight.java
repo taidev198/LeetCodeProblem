@@ -20,7 +20,7 @@ public class HamingWeight {
     static int hammingWeight(int n) {
         int ans = 0;
         for(int i =0; i< 32; i++){
-            if((n & (1 << i)) != 0)
+            if((n & (1 << i)) != 0)//The number 1 << i is the number with 0 everywhere, except for a one in the ith position
                 ans++;
         }
         return ans;
