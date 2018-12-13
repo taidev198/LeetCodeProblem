@@ -1,6 +1,5 @@
 package com.company.superme198.Tries;
 
-import com.sun.org.apache.xml.internal.utils.Trie;
 
 public class Tries {
 
@@ -42,7 +41,7 @@ public class Tries {
             if(pCawl.children[i] != null)
                 return false;
         }
-        return true || !pCawl.isEndOfWord;
+        return true;
     }
 
 
