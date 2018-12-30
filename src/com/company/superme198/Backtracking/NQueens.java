@@ -18,7 +18,6 @@ public class NQueens {
         List<int[]> ans = new ArrayList<>();
         List<List<String>> chosen = new ArrayList<>();
         generateQueens(n,visited, ans, chosen, 0);
-
         return chosen;
     }
 
